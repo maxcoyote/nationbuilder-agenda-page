@@ -27,6 +27,7 @@ The best part? You can view both upcoming and past meeting agendas with this for
 </html>
 ```
 **4.** Sign in to your NationBuilder dashboard and click + New page. Use “agenda” as the slug. The name doesn’t matter.
+
 **5.** Choose the “Calendar” page type.
 
 ## Final Step
