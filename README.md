@@ -6,18 +6,28 @@ Here is a quick tutorial that provides a sleek and effective solution that allow
 The best part? You can view both upcoming and past meeting agendas with this formula.
 
 ## Relevant Files
-HTML: pages_show_calendar_wide.html, agendas.html, agenda_upcoming.html, agenda_past.html, 
+**HTML:** pages_show_calendar_wide.html, agendas.html, agenda_upcoming.html, agenda_past.html, 
 
-SCSS: _agendas.scss
+**SCSS:** _agendas.scss
 
-JS: agendas.js
+**JS:** agendas.js
 
 ## How to Implement
-1. Download these 6 files and upload them to your theme.*
-2. In the theme.scss file, import the _agendas.scss partial.
-3. In the layout.html file, include the external agendas.js file just before the closing </body> tag.
-4. Sign in to your NationBuilder dashboard and click + New page. Use “agenda” as the slug. The name doesn’t matter.
-5. Choose the “Calendar” page type.
+**1.** Download these 6 files and upload them to your theme.*
+**2.** In the theme.scss file, import the _agendas.scss partial.
+```
+// agenda styles
+@import "agendas";
+```
+**3.** In the layout.html file, include the external agendas.js file just before the closing </body> tag.
+```
+<script type="text/javascript" src="agendas.js"></script>
+
+</body>
+</html>
+```
+**4.** Sign in to your NationBuilder dashboard and click + New page. Use “agenda” as the slug. The name doesn’t matter.
+**5.** Choose the “Calendar” page type.
 
 ## Final Step
 Nice work! You’re almost there. Now it’s time to add some meetings.
