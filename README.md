@@ -16,6 +16,7 @@ The best part? You can view both upcoming and past meeting agendas with this for
 
 ## How to Implement
 **1.** Download these 6 files and upload them to your theme.*
+
 **2.** In the theme.scss file, import the _agendas.scss partial.
 ```
 // agenda styles
