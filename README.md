@@ -5,7 +5,7 @@ Here is a quick tutorial that provides a sleek and effective solution that allow
 
 The best part? You can view both upcoming and past meeting agendas with this formula.
 
-![Agendas Example](/blob/master/agendas-example.png?raw=true)
+![Agendas Example](/agendas-example.png?raw=true)
 
 ## Relevant Files
 **HTML:** pages_show_calendar_wide.html, agendas.html, agenda_upcoming.html, agenda_past.html, 
