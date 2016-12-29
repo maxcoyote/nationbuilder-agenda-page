@@ -1,0 +1,17 @@
+<div class="span12">
+	<div class="agenda-border">
+		<div class="month">
+			<h2>{{ event.event.local_start_at | date: '%B' }}</h2>
+		</div>
+		<div class="agenda-holder">
+			<div class="date-box">
+				<span class="date">{{ event.event.local_start_at | date: '%d' }}</span>
+			</div>
+			<ul>
+				{% if event.event.content.size > 0 %}<li class="truncate-200" data-truncate="200">{{ event.event.content }}<li>{% endif %}
+				<li>{{ event.event.local_start_at | date: '%A, %B %d, %Y at %I:%M %p' }}</li>
+			</ul>
+			<a {% if event.attachments.size > 0 %}href="{{ event.attachments.last.url }}"{% endif %} class="button" target="_blank">View {{ page.calendar.event_name }}</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,85 @@
+<div class="agendas">
+	{% if page.headline.size > 0 %}
+	<div id="headline">
+	  <h2>{{ page.headline }}</h2>
+	</div>
+	{% endif %}
+
+	{% if page.calendar.events_upcoming_count == 0 %}
+
+	No {{ page.calendar.event_name | pluralize | downcase }} yet.
+
+	{% else %}
+
+	{% if page.calendar.events_upcoming_count > 0 %}
+
+	<div class="agenda-upcoming">
+
+		<div class="title">
+			<span>Upcoming</span>
+		</div>
+
+		<div class="agenda-content">
+			<div class="row-fluid">
+			{% for event in page.calendar.events_upcoming | limit: 4 %}
+				{% include "agenda_upcoming" %}
+			{% endfor %}
+			</div>
+		</div>
+
+	</div>
+
+	{% endif %}
+
+	{% if page.calendar.events_past_count > 0 %}
+
+	<div class="agenda-past">
+
+		<div class="title padtopmore">
+			<span>Past</span>
+		</div>
+
+		<div class="agenda-content">
+			<div class="row-fluid">
+				<div class="span4">
+				<h4 class="click click-16">2016 <i class="fa fa-angle-right"></i></h4>
+				{% for event in page.calendar.events_past | limit: 52 %}
+				{% assign event_year = event.event.local_start_at | date: '%Y' %}
+				{% if event_year == "2016" %}
+				<div class="expand expand-16">
+				{% include "agenda_past" %}
+				</div>
+				{% endif %}
+				{% endfor %}
+				</div>
+				<div class="span4">
+				<h4 class="click click-15">2015 <i class="fa fa-angle-right"></i></h4>
+				{% for event in page.calendar.events_past | limit: 52 %}
+				{% assign event_year = event.event.local_start_at | date: '%Y' %}
+				{% if event_year == "2015" %}
+				<div class="expand expand-15">
+				{% include "agenda_past" %}
+				</div>
+				{% endif %}
+				{% endfor %}
+				</div>
+				<div class="span4">
+				<h4 class="click click-14">2014 <i class="fa fa-angle-right"></i></h4>
+				{% for event in page.calendar.events_past | limit: 52 %}
+				{% assign event_year = event.event.local_start_at | date: '%Y' %}
+				{% if event_year == "2014" %}
+				<div class="expand expand-14">
+				{% include "agenda_past" %}
+				</div>
+				{% endif %}
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	{% endif %}
+
+	{% endif %}
+</div>	

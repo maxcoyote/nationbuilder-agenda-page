@@ -1,0 +1,155 @@
+.agendas {
+	.agenda-upcoming, .agenda-past {
+		.title {
+			white-space: nowrap;
+		    border-bottom: 2px solid #e8e8e8;
+		    margin-bottom: 15px;
+		    padding: 0;
+		    span {
+		    	color: #666666;
+		    	font-size: 16px;
+		    	text-transform: uppercase;
+		    	letter-spacing: 3px;
+			    white-space: normal;
+			    vertical-align: middle;
+			    margin-bottom: -2px;
+			    border-bottom: 2px solid $theme-color-1;
+			    display: inline-block;
+			    padding: 5px 0px;
+		    }
+		}
+		.agenda-border {
+			padding: 10px;
+			background: #F2F2F2;
+			border: 2px solid #ededed;
+			border-radius: 3px 3px 0 0;
+	    	-moz-border-radius: 3px 3px 0 0;
+	    	-webkit-border-radius: 3px 3px 0 0;
+	    	overflow: hidden;
+			.month {
+				padding: 15px;
+				h2 {
+					color: #a6a6a6;
+					font-size: 20px;
+					text-align: center;
+					text-transform: uppercase;
+					line-height: 1.2;
+					font-weight: 400;
+				}
+			}
+			.agenda-holder {
+				position: relative;
+				border: none;
+		    	padding-bottom: 0;
+		    	text-align: center;
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					li {
+						color: #8f9394;
+						text-align: center;
+						margin-left: -10px;
+						margin-right: -10px;
+						padding: 12px 10px;
+						background: #f9f9f9;
+					}
+				}
+				.button {
+					width: 100%;
+					text-align: center;
+				}
+				.agenda-content {
+					margin-bottom: 30px;
+				}
+			}
+		}	
+	}
+	.agenda-upcoming {
+		.span3:first-child .agenda-border .agenda-holder {
+			.date-box {
+				border: 5px solid $green;
+				color: $green;
+			}
+			.button {
+				background-color: $green;
+				&:hover {
+					background-color: darken($green, 5);
+				}
+			}
+		}
+		.agenda-border {
+			margin-bottom: 30px;
+			@media only screen and (min-width: 768px) {
+		    	margin-bottom: 0;
+		    }
+	    	.agenda-holder {
+				@media only screen and (min-width: 768px) {
+			    	min-height: 300px;
+		    		.button {
+			    		position: absolute;
+						bottom: 0;
+						left: 0;
+			    	}
+		    	}
+			}
+			.date-box {
+				width: 118px;
+				height: 118px;
+				margin: 0 auto 15px;
+				border-radius: 50%;
+			    -moz-border-radius: 50%;
+			    -webkit-border-radius: 50%;
+			    border: 5px solid $theme-color-1;
+			    color: $theme-color-1;
+			    text-align: center;
+		    	.date {
+			    	padding-top: 29px;
+			    	padding-bottom: 29px;
+			    	display: inline-block;
+			    	font-size: 50px;
+			    	line-height: 1;
+		    	}
+			}
+		}
+	}
+	.agenda-past {
+		.agenda-border {
+			margin-bottom: 30px;
+			.date-box {
+				width: 59px;
+				height: 59px;
+				margin: 0 auto 15px;
+				border-radius: 50%;
+			    -moz-border-radius: 50%;
+			    -webkit-border-radius: 50%;
+			    border: 3px solid $theme-color-1;
+			    color: $theme-color-1;
+			    text-align: center;
+			    .date {
+			    	padding-top: 16.5px;
+			    	padding-bottom: 16.5px;
+			    	display: inline-block;
+			    	font-size: 20px;
+			    	line-height: 1;
+			    }
+			}
+		}
+	}
+	.click {
+		margin-bottom: 10px;
+	    padding: 15px;
+	    background: #f9f9f9;
+	    border: 2px solid #ededed;
+	    text-align: center;
+		&:hover {
+			cursor: pointer;
+		}
+		.fa {
+			color: #A4A4A4;
+		}
+	}
+	.expand {
+		display: none;
+	}
+}
