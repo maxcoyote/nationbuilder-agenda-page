@@ -5,6 +5,8 @@ Here is a quick tutorial that provides a sleek and effective solution that allow
 
 The best part? You can view both upcoming and past meeting agendas with this formula.
 
+![Agendas Example](/maxcoyote/nationbuilder-agenda-page/blob/master/agendas-example.png?raw=true)
+
 ## Relevant Files
 **HTML:** pages_show_calendar_wide.html, agendas.html, agenda_upcoming.html, agenda_past.html, 
 
@@ -28,7 +30,11 @@ The best part? You can view both upcoming and past meeting agendas with this for
 ```
 **4.** Sign in to your NationBuilder dashboard and click + New page. Use “agenda” as the slug. The name doesn’t matter.
 
+![Screenshot 1](/maxcoyote/nationbuilder-agenda-page/blob/master/screenshot-1.png?raw=true)
+
 **5.** Choose the “Calendar” page type.
+
+![Screenshot 2](maxcoyote/nationbuilder-agenda-page/blob/master/screenshot-2.png?raw=true)
 
 ## Final Step
 Nice work! You’re almost there. Now it’s time to add some meetings.
