@@ -31,6 +31,8 @@
 
 	{% endif %}
 
+	{% endif %}
+
 	{% if page.calendar.events_past_count > 0 %}
 
 	<div class="agenda-past">
@@ -43,7 +45,7 @@
 			<div class="row-fluid">
 				<div class="span4">
 				<h4 class="click click-16">2016 <i class="fa fa-angle-right"></i></h4>
-				{% for event in page.calendar.events_past | limit: 52 %}
+				{% for event in page.calendar.events_past reversed | limit: 52 %}
 				{% assign event_year = event.event.local_start_at | date: '%Y' %}
 				{% if event_year == "2016" %}
 				<div class="expand expand-16">
@@ -54,7 +56,7 @@
 				</div>
 				<div class="span4">
 				<h4 class="click click-15">2015 <i class="fa fa-angle-right"></i></h4>
-				{% for event in page.calendar.events_past | limit: 52 %}
+				{% for event in page.calendar.events_past reversed | limit: 52 %}
 				{% assign event_year = event.event.local_start_at | date: '%Y' %}
 				{% if event_year == "2015" %}
 				<div class="expand expand-15">
@@ -65,7 +67,7 @@
 				</div>
 				<div class="span4">
 				<h4 class="click click-14">2014 <i class="fa fa-angle-right"></i></h4>
-				{% for event in page.calendar.events_past | limit: 52 %}
+				{% for event in page.calendar.events_past reversed | limit: 52 %}
 				{% assign event_year = event.event.local_start_at | date: '%Y' %}
 				{% if event_year == "2014" %}
 				<div class="expand expand-14">
@@ -81,5 +83,4 @@
 
 	{% endif %}
 
-	{% endif %}
-</div>	
+</div>
