@@ -44,6 +44,7 @@
 		    	text-align: center;
 				ul {
 					margin: 0 -10px;
+					padding: 12px 10px;
 					list-style: none;
 					background: #f9f9f9;
 					li {
@@ -84,7 +85,7 @@
 		    }
 	    	.agenda-holder {
 	    		ul {
-					padding: 12px 10px 56px;
+					border-bottom: 56px solid #F2F2F2;
 				}
 				@media only screen and (min-width: 768px) {
 			    	min-height: 300px;
@@ -118,11 +119,6 @@
 	.agenda-past {
 		.agenda-border {
 			margin-bottom: 30px;
-			.agenda-holder {
-				ul {
-					padding: 12px 10px;
-				}
-			}
 			.date-box {
 				width: 59px;
 				height: 59px;
